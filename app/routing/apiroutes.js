@@ -14,7 +14,6 @@ router.get('/api/friends', (req,res)=>{
 
 router.post('/survey', urlEncodedParser, (req,res)=>{
     let request = req.body;
-    console.log(request);
     res.json(request);
 });
 

@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function(data){
 
        console.log(data)
+       //NEED TO ADD A MODAL AND THEN TAKE SELECTED JSON OBJECT AND ADD THE NAME AND URL TO IT WHEN WE HAVE A MATCH
+       //THEN ADD MATCH LOGIC
 
         $('#first-name').val("")
       
