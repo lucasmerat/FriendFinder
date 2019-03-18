@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Grab form elements
     var filledSurvey = {
         firstname: $('#first_name').val().trim(),
-        phoneNumber: $('#photo').val().trim(),
+        photo: $('#photo').val().trim(),
         scores: {
             q1: $('#q1').val(),
             q2: $('#q1').val(),
@@ -40,6 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
        //THEN ADD MATCH LOGIC
        $('.modal').modal();
        $('.modal').modal('open'); 
+
+       let name = data.name;
+       let photo = data.photo;
+       $(".name").append(`<h5>${name}</h5>`)
+       $(".modal-content").append(`<img class="photo" src= "${photo}" />`)
 
         $('#first_name').val("")
         $('#photo').val("")
