@@ -2,18 +2,20 @@ const express = require('express')
 const router = express.Router();
 const path = require('path');
 const friends = require('../data/friends')
+const bodyParser = require('body-parser')
 
-router.use(express.urlencoded({ extended: true }));
-router.use(express.json());
+const urlEncodedParser = bodyParser.urlencoded({ extended: true })
+
 
 router.get('/api/friends', (req,res)=>{
     console.log('Get some json!');
     res.json(friends);
 });
 
-router.post('/api/friends', (req,res)=>{
-    console.log('Send some json!');
-    res.end();
+router.post('/survey', urlEncodedParser, (req,res)=>{
+    let request = req.body;
+    console.log(request);
+    res.json(request);
 });
 
 module.exports = router;
