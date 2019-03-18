@@ -23,20 +23,26 @@ router.post('/survey', urlEncodedParser, (req,res)=>{
     //Initializing arr of differences between each friend and variable to hold the index of that friend, lastly, a variable to store the lowest difference or selected friend
     let friendDiffs = [];
     let friendIndex = 0;
-    lowestDiffIndex = 0;
+    let lowestDiffIndex = 0;
+
     //Loops through all 4 friends to find a closest match, comparing all scores to an aggregate and pushing the lowest to the winning index
-    while(friendIndex < 4){
+    while(friendIndex < 5){
         let totalDiff = 0;
         for(let i=0;i<userScoreArr.length;i++){
             let diff = Math.abs(friends[friendIndex].scores[i] - userScoreArr[i])
             totalDiff+=diff
         }
         friendDiffs.push(totalDiff);
-        if(friendDiffs[friendIndex] < friendDiffs[friendIndex-1]){
+        console.log(friendDiffs[friendIndex])
+        console.log(friendDiffs[friendIndex-1])
+        if(friendDiffs[friendIndex] <= friendDiffs[lowestDiffIndex]){
+            console.log(lowestDiffIndex)
             lowestDiffIndex = friendIndex;
+            console.log("Newest low diff index is " + lowestDiffIndex)
         }
         friendIndex++;
     }
+    console.log(friendDiffs)
 
     console.log(`The selected friend is: ${friends[lowestDiffIndex].name}`)
 
