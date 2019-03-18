@@ -28,20 +28,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log(filledSurvey);
 
+    $('.modal').modal();
+
 
     var currentURL = window.location.origin;
 
     $.post(currentURL + "/survey", filledSurvey,
     function(data){
-
        console.log(data)
        //NEED TO ADD A MODAL AND THEN TAKE SELECTED JSON OBJECT AND ADD THE NAME AND URL TO IT WHEN WE HAVE A MATCH
        //THEN ADD MATCH LOGIC
+       $('.modal').modal();
+       $('.modal').modal('open'); 
 
-        $('#first-name').val("")
+        $('#first_name').val("")
+        $('#photo').val("")
       
     });
 
 return false;
 
 });
+
+
+
