@@ -1,0 +1,17 @@
+.fas {
+    font-size: 3.5em;
+    margin-top: 1em;
+    color: #26a69a;
+}
+
+body {
+    background-color: #f5ebfb;
+}
+
+.to-survey {
+    margin-top:20px;
+}
+
+.submit-form{
+    margin-bottom:10px;
+}
