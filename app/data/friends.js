@@ -1,65 +1,81 @@
 let friends = [
     {
-        "name":"Ahmed",
-        "photo":"https://www.abc.net.au/news/image/8281460-3x2-940x627.jpg",
+        "name":"Tan",
+        "photo":"https://media.giphy.com/media/31Sm9mqj3NhPSNoId6/giphy.gif",
         "scores":[
+            2,
+            3,
+            5,
             1,
             2,
+            1,
+            3,
+            2,
+            5,
+            3
+          ]
+      },
+      {
+        "name":"Antoni",
+        "photo":"https://media.giphy.com/media/oOZvI671t1nM4L5h37/giphy.gif",
+        "scores":[
+            2,
+            3,
+            2,
+            5,
+            4,
             4,
             3,
-            3,
-            1,
-            2,
-            3,
+            4,
             1,
             1
           ]
       },
       {
-        "name":"Jillian",
-        "photo":"https://www.abc.net.au/news/image/8281460-3x2-940x627.jpg",
+        "name":"Karamo",
+        "photo":"https://media.giphy.com/media/d5JGrmuuuEVIWgsnkz/giphy.gif",
         "scores":[
-            5,
-            1,
-            4,
-            4,
-            5,
-            1,
+            2,
             2,
             5,
+            2,
+            1,
+            1,
+            2,
             4,
-            1
+            4,
+            3
           ]
       },
       {
-        "name":"John",
-        "photo":"https://www.abc.net.au/news/image/8281460-3x2-940x627.jpg",
+        "name":"Jonathan",
+        "photo":"https://media.giphy.com/media/5PhoLTGAiHguInjU8w/giphy.gif",
         "scores":[
-            4,
-            4,
-            4,
-            2,
-            1,
-            4,
-            3,
-            2,
-            1,
-            1
-          ]
-      },
-      {
-        "name":"Terrance",
-        "photo":"https://www.abc.net.au/news/image/8281460-3x2-940x627.jpg",
-        "scores":[
-            1,
-            3,
-            3,
-            2,
+            5,
             5,
             1,
-            2,
+            4,
+            4,
+            3,
+            4,
+            5,
+            5,
+            2
+          ]
+      }, 
+      {
+        "name":"Bobby",
+        "photo":"https://media.giphy.com/media/289Nf91IWNjM98e1qy/giphy.gif",
+        "scores":[
+            1,
+            1,
+            5,
+            3,
             2,
             3,
+            5,
+            3,
+            1,
             5
           ]
       }

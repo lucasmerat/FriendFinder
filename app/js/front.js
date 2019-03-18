@@ -1,3 +1,5 @@
+//Materialize setup
+
 let options = [];
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -5,13 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.FormSelect.init(elems, options);
   });
 
+//Listens for click on submit and uses AJAX for post request of survey data to back end
+
   $(".submit-form").on("click", function(e){
     e.preventDefault();
 
     // Grab form elements
     var filledSurvey = {
         firstname: $('#first_name').val().trim(),
-        photo: $('#photo').val().trim(),
         scores: {
             q1: $('#q1').val(),
             q2: $('#q1').val(),
@@ -26,26 +29,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     };
 
-    console.log(filledSurvey);
-
-    $('.modal').modal();
-
-
     var currentURL = window.location.origin;
 
     $.post(currentURL + "/survey", filledSurvey,
     function(data){
+        $("#name-photo").empty();
        console.log(data)
-       //NEED TO ADD A MODAL AND THEN TAKE SELECTED JSON OBJECT AND ADD THE NAME AND URL TO IT WHEN WE HAVE A MATCH
-       //THEN ADD MATCH LOGIC
+       //Triggers modal from materialize
        $('.modal').modal();
        $('.modal').modal('open'); 
 
+       //Adds winning cast member to modal
        let name = data.name;
        let photo = data.photo;
-       $(".name").append(`<h5>${name}</h5>`)
-       $(".modal-content").append(`<img class="photo" src= "${photo}" />`)
-
+       $("#name-photo").append(`<h5>Name: ${name}</h5><img class="responsive-img" src= "${photo}" />`)
         $('#first_name').val("")
         $('#photo').val("")
       

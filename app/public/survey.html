@@ -10,17 +10,17 @@
     />
     <link rel="stylesheet" href="../css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <title>FriendFinder - Survey</title>
+    <title>FriendFinder - Quiz</title>
   </head>
   <body>
-   <!-- Modal Trigger -->
-   <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 
-   <!-- Modal Structure -->
-   <div id="modal1" class="modal open">
+    <div id="modal1" class="modal open">
      <div class="modal-content">
-       <h4>Your Have A Friend Match!</h4>
-       <h5>Name: <span class="name"></span></p>
+       <h4>Results are in! You are:</h4>
+       <div id="name-photo">
+
+       </div>
+
      </div>
      <div class="modal-footer">
        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
@@ -40,19 +40,10 @@
                 required
                 />
             </div>
-            <div class="input-field col s12">
-                <h5>URL to photo of you</h5>
-                <input
-                placeholder="Placeholder"
-                id="photo"
-                type="text"
-                class="validate"
-                required
-                />
-            </div>
+
             <h3>Questions</h3>
 
-            <h5>Your mind is always buzzing with unexplored ideas and plans.</h5>
+            <h5>You can't stand being alone</h5>
             <div class="input-field col s12">
                 <select id="q1">
                 <option value="" disabled selected>Choose your option</option>
@@ -64,7 +55,7 @@
                 </select>
             </div>
 
-            <h5>Generally speaking, you rely more on your experience than your imagination.</h5>
+            <h5>You bring the excitement and party to every situation</h5>
             <div class="input-field col s12">
                 <select id="q2">
                 <option value="" disabled selected>Choose your option</option>
@@ -88,7 +79,7 @@
                 </select>
             </div>
 
-            <h5>You rarely do something just out of sheer curiosity.</h5>
+            <h5>You always try things, because you're just so curious</h5>
             <div class="input-field col s12">
                 <select id="q4">
                 <option value="" disabled selected>Choose your option</option>
@@ -100,7 +91,7 @@
                 </select>
             </div>
 
-            <h5>People can rarely upset you.</h5>
+            <h5>You get frustrated easily</h5>
             <div class="input-field col s12">
                 <select id="q5">
                 <option value="" disabled selected>Choose your option</option>
@@ -112,7 +103,7 @@
                 </select>
             </div>
 
-            <h5>It is often difficult for you to relate to other people’s feelings.</h5>
+            <h5>You find it difficult to empathize with those round you</h5>
             <div class="input-field col s12">
                 <select id= "q6">
                 <option value="" disabled selected>Choose your option</option>
@@ -136,7 +127,7 @@
                 </select>
             </div>
 
-            <h5>You rarely get carried away by fantasies and ideas.</h5>
+            <h5>You almost always do what you think is right, despite what others might think</h5>
             <div class="input-field col s12">
                 <select id="q8">
                 <option value="" disabled selected>Choose your option</option>
@@ -148,7 +139,7 @@
                 </select>
             </div>
 
-            <h5>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h5>
+            <h5>You take a long time to get dressed before going out</h5>
             <div class="input-field col s12">
                 <select id="q9">
                 <option value="" disabled selected>Choose your option</option>
@@ -160,7 +151,7 @@
                 </select>
             </div>
 
-            <h5>You feel more energetic after spending time with a group of people.</h5>
+            <h5>You almost always do what is most difficult, because you enjoy a challenge</h5>
             <div class="input-field col s12">
                 <select id="q10">
                 <option value="" disabled selected>Choose your option</option>
@@ -174,6 +165,7 @@
             <div class="center">
                 <button class="submit-form btn waves-effect waves-light" type="submit">Submit answers</button>
             </div>
+            <p><a href="/api/cast">API Queer Eye Cast Data</a> | <a href="https://github.com/lucasmerat/FriendFinder"> GitHub Repo</a></p>
         </form>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
