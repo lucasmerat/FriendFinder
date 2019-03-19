@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
     $.post(currentURL + "/survey", filledSurvey,
     function(data){
         $("#name-photo").empty();
-       console.log(data)
-       //Triggers modal from materialize
+
+        //Triggers modal from materialize
        $('.modal').modal();
        $('.modal').modal('open'); 
 
@@ -45,11 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
        $("#name-photo").append(`<h5>Name: ${name}</h5><img class="responsive-img" src= "${photo}" />`)
         $('#first_name').val("")
         $('#photo').val("")
-      
     });
-
-return false;
-
 });
 
 
