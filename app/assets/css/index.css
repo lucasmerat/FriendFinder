@@ -1,30 +1,54 @@
 .fas {
-    font-size: 3.5em;
-    margin-top: 1em;
-    color: #26a69a;
+  font-size: 3.5em;
+  margin-top: 1em;
+  color: #26a69a;
 }
 
 body {
-    background-color: #f5ebfb;
+  background-color: #f5ebfb;
+  font-family: "Open Sans", sans-serif;
 }
 
 .to-survey {
-    margin-top:20px;
+  margin-top: 20px;
 }
 
-.submit-form{
-    margin-bottom:10px;
+.submit-form {
+  margin-bottom: 10px;
 }
 
 .photo {
-    width:250px;
-    height:250px;
+  width: 250px;
+  height: 250px;
 }
 
 .cast {
-    max-height:400px;
+  max-height: 400px;
 }
 
 .title {
-    margin-top:1.68rem;
+  margin-top: 1.68rem;
+}
+
+.modal-content,
+.modal-footer,
+.modal {
+  text-align: center !important;
+}
+
+.modal-close {
+  background: #26a69a;
+  color: white;
+}
+
+.answer {
+  margin: 35px 0px;
+}
+
+.images {
+  margin-top: 40px;
+}
+
+.s6 img {
+  max-height: 200px;
 }

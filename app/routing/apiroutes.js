@@ -15,9 +15,7 @@ router.post("/survey", urlEncodedParser, (req, res) => {
   //Populating filled out user scores from request to iterable array
   let userScores = request.scores;
   let userScoreArr = [];
-  console.log(request)
   for (let score in userScores) {
-      console.log(userScores.q2)
     userScoreArr.push(Number(userScores[score]));
   }
 
@@ -41,7 +39,7 @@ router.post("/survey", urlEncodedParser, (req, res) => {
     }
     friendIndex++;
   }
-  console.log(`Your scores were: ${userScoreArr}`)
+  console.log(`Your scores were: ${userScoreArr}`);
   console.log(`The fab 5's scores were: ${friendDiffs}`);
 
   console.log(`The selected friend is: ${friends[lowestDiffIndex].name}`);
