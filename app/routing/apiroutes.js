@@ -6,7 +6,6 @@ const bodyParser = require("body-parser");
 const urlEncodedParser = bodyParser.urlencoded({ extended: true });
 
 router.get("/api/cast", (req, res) => {
-  console.log("Get some json!");
   res.json(friends);
 });
 
