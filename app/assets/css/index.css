@@ -20,3 +20,11 @@ body {
     width:250px;
     height:250px;
 }
+
+.cast {
+    max-height:400px;
+}
+
+.title {
+    margin-top:1.68rem;
+}
